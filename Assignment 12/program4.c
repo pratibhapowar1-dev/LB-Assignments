@@ -1,0 +1,66 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include <stdio.h>      //For Input Output
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountFour
+//  Description   : It is used to count frequency of 4 in it  
+//  Input         : Intiger  
+//  OutPut        : Intiger  
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 1 Nov 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+
+int CountFour(int iNo)
+{
+    int iDigit = 0;
+    int iCnt = 0;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while (iNo > 0)
+    {
+        iDigit = iNo % 10;
+        if (iDigit == 4)
+        {
+            iCnt++;
+        }
+        iNo = iNo / 10;
+    }
+
+    return iCnt;
+}
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter number: ");
+    scanf("%d", &iValue);
+
+    iRet = CountFour(iValue);
+
+    printf("Frequency of 4 is: %d\n", iRet);
+
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Input : 2395    Output : 0
+//  Input : 1018    Output : 0  
+//  Inpur : 9440    Output : 2
+//
+////////////////////////////////////////////////////////////////////////////////
