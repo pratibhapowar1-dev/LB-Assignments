@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Percentage
+//  Description   : It is used to calculate percentage
+//  Input         : Intiger  
+//  OutPut        : intiger
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 29 Oct 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+float Percentage(int iTotal,int iObtained)
+{
+    float result = 0.0;
+
+    if(iTotal==0)
+    {
+        return 0.0;
+    }
+    else
+   { 
+    return  (((float)iObtained/(float)iTotal)*100);
+   }
+    
+}
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+/////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+    float fRet = 0.0;
+
+    printf("Please Enter total marks : ");
+    scanf("%d",&iValue1);
+
+    printf("Please Enter Obtained marks :");
+    scanf("%d",&iValue2);
+
+    fRet = Percentage(iValue1,iValue2);
+    printf("percentage is :%.2f%% ",fRet);
+
+
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcasess successfully handaled by the applications
+//  
+//  Input : 1000    745   Output : 74.5%
+//  
+//
+////////////////////////////////////////////////////////////////////////////////
