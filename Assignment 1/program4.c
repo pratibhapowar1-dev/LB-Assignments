@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>        // For Input Output
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : DisplayConvert
+//  Description   : It is used to convert case of character 
+//  Input         : character
+//  OutPut        : character 
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 29 Oct 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+void DisplayConvert(char cValue)
+{
+    if(cValue>='A' && cValue<='Z')
+    {
+        cValue = cValue + 32;
+        printf("%c",cValue );
+    }
+    else if(cValue>='a' && cValue<= 'z')
+    {
+        cValue = cValue - 32;
+        printf("%c",cValue );
+    }
+    else
+    {
+        printf("%c",cValue);
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter Character:\n");
+    scanf("%c",&cValue);
+
+    DisplayConvert(cValue);
+
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcasess successfully handaled by the applications
+//  
+//  Input : A  Output : a  
+//  Input : b  Output : B 
+//  Inpur : g  Output : G 
+//
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>       //   For Input Output 
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : DisplayEvenFacte
+//  Description   : It is used to print even facters of that number 
+//  Input         : Intiger  
+//  OutPut        : Intiger  
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 29 Oct 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+void DisplayEvenFactor(int iNo)
+{
+    int i = 0;
+    if(iNo<=0)
+    {
+        iNo = -iNo;
+    }
+    for(i=1; i<=(iNo/2); i++)
+    {
+        if((iNo % i == 0)&&(i % 2 == 0))
+        {
+            printf("%d\t",i);
+        }
+    }
+}
+//  Time complexcity o(N/2)
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter Number:");
+    scanf("%d",&iValue);
+
+    DisplayEvenFactor(iValue);
+
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcasess successfully handaled by the applications
+//  
+//  Input : 24   Output :   1   2   4   6   8   12
+//  Input : 36   Output :   2   6   12  18
+//  Inpur : 16   Output :   2   4   8  
+//
+////////////////////////////////////////////////////////////////////////////////
