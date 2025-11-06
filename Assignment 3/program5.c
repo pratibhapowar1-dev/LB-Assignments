@@ -1,0 +1,57 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : FindLargest
+//  Description   : It is used to find Largest number
+//  Input         : Intiger  
+//  OutPut        : String
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 29 Oct 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+int FindLargest(int x, int y, int z)
+{
+    if(x > y && x > z)
+    {
+        return x;
+    }
+    else if(y>z)
+    {
+        return y;
+    }
+    else
+    {
+        return z;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+/////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int a,b,c, result;
+    printf("Enter three number : ");
+    scanf("%d %d %d",&a, &b, &c);
+
+    result = FindLargest(a,b,c);
+    printf("Largest number is : %d\n",result);
+
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcasess successfully handaled by the applications
+//  
+//  Input : 71, 10, 20   Output : largest number is  71
+//  Input : 42, 20,788   Output : largest number is  788            
+//  Inpur : 12, 14 , 15  Output : largest number is  15
+//
+////////////////////////////////////////////////////////////////////////////////

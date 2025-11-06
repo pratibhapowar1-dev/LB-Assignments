@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CheckNumberType
+//  Description   : It is used to Check number type
+//  Input         : Intiger  
+//  OutPut        : String
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 29 Oct 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+
+void CheckNumberType(int num)
+{
+    if(num > 0)
+    {
+        printf("%d is a possitive number\n",num);
+    }
+    else if(num < 0)
+    {
+        printf("%d is a nigative number\n",num);
+    }
+    else
+    {
+        printf("Number is Zerro\n");
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+/////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    int number;
+    printf("Enter number : ");
+    scanf("%d",&number);
+
+    CheckNumberType(number);
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcasess successfully handaled by the applications
+//  
+//  Input : 71    Output : 71 is a positive number
+//  Input : 42    Output : 75 is a positive number                      
+//  Inpur : -20   Output : -20 is nigative number
+//
+////////////////////////////////////////////////////////////////////////////////
