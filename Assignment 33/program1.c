@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+#define TRUE 1
+#define FALSE 0
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : ChkAlpha
+//  Description   : It is used to check character 
+//  Input         : character  
+//  OutPut        : character 
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 28 Nov 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+
+typedef int BOOL;
+
+BOOL ChkAlpha(char ch)
+{
+    if(ch >= 'A' && ch <='Z'|| ch>='a'&& ch<='z')    
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+    BOOL bRet = FALSE;
+
+    printf("Enter the character : ");
+    scanf("%c",&cValue);
+
+    bRet = ChkAlpha(cValue);
+
+    if(bRet == TRUE)
+    {
+        printf("It is Character");
+    }
+    else
+    {
+       printf("it is not a character");
+
+    }
+    return 0;
+}
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Input : A    Output : it is character
+//  Inpur : #    Output : it is not a character  
+//
+////////////////////////////////////////////////////////////////////////////////
