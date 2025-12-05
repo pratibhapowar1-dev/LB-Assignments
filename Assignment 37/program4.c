@@ -1,0 +1,64 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Heder Files
+//
+////////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : LastChar
+//  Description   : It is used to return last occurrence 
+//  Input         : string 
+//  OutPut        : string 
+//  Author        : Pratibha Sagar Pawar
+//  Date          : 4 Dec 2025
+//      
+////////////////////////////////////////////////////////////////////////////////
+
+int LastChar(char *str, char ch)                          
+
+{ 
+  int iIndex= -1;
+  int i = 0;
+
+  while(str[i] != '\0')
+    {
+      if(str[i] != '\0')
+      {
+        iIndex = i;
+      }
+      i++;
+    }
+    return iIndex;
+}
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entery point function for the application 
+// 
+////////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    char arr[20];
+    char cValue;
+    int iRet = 0;
+
+    printf("Enter string :\n");
+    scanf("%[^'\n']s",arr);
+
+    printf("Enter the character :\n");
+    scanf(" %c",&cValue);
+
+    iRet = LastChar(arr, cValue);
+
+    printf("character location is %d",iRet);
+
+    return 0;
+}
+
+//  End of main Function
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Input : MARK          M        Output :  3
+//  Inpur : MARVELLOUS    E        Output :  9
+//
+////////////////////////////////////////////////////////////////////////////////
